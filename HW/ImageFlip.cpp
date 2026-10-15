@@ -1,13 +1,15 @@
+// HW/ImageFlip.cpp
 
-#include "Course_Lib//myHist.h"
+#include "items.h"
+#include "../Course_Lib/myHist.h"
 
-int main()
+void HW_ImageFlip()
 {
     cv::Mat m_in = cv::imread("images//lena.bmp", 0);
     cv::Mat mat1, mat2;
     if(m_in.empty()) {
         std::cout << "Could not open or find the image" << std::endl;
-        return -1;
+        return;
 	}
     int ROW = m_in.rows;
     int COL = m_in.cols;
@@ -31,6 +33,4 @@ int main()
     cv::imshow("Lena_right_side_left", mat2);
     //------------------------------------------------------------------------------------------
     cv::waitKey(0);
-    return 0;
 }
-

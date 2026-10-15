@@ -41,7 +41,7 @@ myHist::myHist(myHist::Type type){
 */
 myHist::myHist(float fStart, float fBinSize, float fBinGap, int iBin){
 	if (iBin <= 0){
-		printf("myHist::Constructor(): Invalid bin number \n", iBin);
+		printf("myHist::Constructor(): Invalid bin number %d\n", iBin);
 		return;
 	}// End of if-condition
 
