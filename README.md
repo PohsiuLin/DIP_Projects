@@ -10,11 +10,11 @@ All assignments have been consolidated into a single project framework and can b
 
 Input image:
 
-![Input Image](images/connected_component_input.png)
+![Input Image](images/license_plate.bmp)
 
 Result:
 
-![Connected Component Labeling](images/Result of connected component labeling_screenshot_19.10.2026.png)
+![Connected Component Labeling](images/component_labeling_demo.png)
 
 The implementation applies:
 
