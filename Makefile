@@ -8,7 +8,17 @@ CXXFLAGS = -std=c++17 -Wall $(OPENCV_CFLAGS)
 SRC = \
     DIP.cpp \
     Course_Lib/myHist.cpp \
-	HW/ImageFlip.cpp 
+	HW/ImageFlip.cpp \
+	HW/BoxFilter.cpp \
+	HW/GaussianNoise.cpp \
+	HW/ConnectedComponentLabeling.cpp \
+	HW/HistogramEqualization.cpp \
+	HW/HistogramMatching.cpp \
+	HW/LaplacianEnhancement.cpp \
+	HW/MedianFilter.cpp \
+	HW/UniformNoise.cpp \
+	HW/SaltPepperNoise.cpp \
+	HW/functions.cpp
 
 TARGET = dip.exe
 

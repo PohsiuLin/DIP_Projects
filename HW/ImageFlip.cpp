@@ -3,21 +3,23 @@
 #include "items.h"
 #include "../Course_Lib/myHist.h"
 
-void HW_ImageFlip()
+void ImageFlip()
 {
     cv::Mat m_in = cv::imread("images//lena.bmp", 0);
     cv::Mat mat1, mat2;
-    if(m_in.empty()) {
+    if (m_in.empty())
+    {
         std::cout << "Could not open or find the image" << std::endl;
         return;
-	}
+    }
     int ROW = m_in.rows;
     int COL = m_in.cols;
     mat1.create(ROW, COL, CV_8UC1);
     mat2.create(ROW, COL, CV_8UC1);
     //------------------------------------------------------------------------------------------
     for (int r = 0; r < ROW; r++)
-        for (int c = 0; c < COL; c++) {
+        for (int c = 0; c < COL; c++)
+        {
             uchar v = m_in.at<uchar>(r, c);
             mat1.at<uchar>(ROW - r - 1, c) = v;
             mat2.at<uchar>(r, COL - c - 1) = v;

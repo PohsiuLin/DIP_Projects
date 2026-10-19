@@ -1,50 +1,163 @@
 # DIP Course Projects
 
-This repository contains different Digital Image Processing (DIP) course projects, each implemented in its own branch.
+This repository contains a collection of Digital Image Processing (DIP) course assignments implemented in C++ using OpenCV.
 
-## Branches
+All assignments have been consolidated into a single project framework and can be selected and executed through a unified menu system.
 
-### 1. Thresholding-and-Connected-Component-Finding
-- **Project:** Thresholding and Connected Component Labeling (CCL)
-- **Description:** Performs image binarization using Otsu's algorithm and labels connected components in the binary image.
-- **Tech / Features:** OpenCV, C++, Otsu Thresholding, Connected Component Labeling, Color mapping for visualizing objects
+## Demo
 
-### 2. Uniform-Noise
-- **Project:** Uniform Noise
-- **Description:** Adds uniform noise to an image to test filtering and denoising algorithms.
-- **Tech / Features:** OpenCV, C++, Uniform noise generation, Pixel-level manipulation
+### Connected Component Labeling
 
-### 3. Salt-and-Pepper-Noise
-- **Project:** Salt-and-Pepper Noise
-- **Description:** Adds salt-and-pepper noise to an image and evaluates the effect of different filters.
-- **Tech / Features:** OpenCV, C++, Randomly set pixels to 0 or 255
+Input image:
 
-### 4. Gaussian-Noise
-- **Project:** Gaussian Noise
-- **Description:** Adds Gaussian-distributed noise to an image to test filtering and denoising.
-- **Tech / Features:** OpenCV, C++, Gaussian noise generation, Pixel-level manipulation
+![Input Image](images/connected_component_input.png)
 
-### 5. Media_filter
-- **Project:** Median Filtering
-- **Description:** Applies a median filter to noisy images to remove salt-and-pepper noise.
-- **Tech / Features:** OpenCV, C++, Median Filter, Noise Reduction
+Result:
 
-### 6. Laplacian_image_enhancement
-- **Project:** Laplacian Image Enhancement
-- **Description:** Enhances image details using the Laplacian operator to highlight edges.
-- **Tech / Features:** OpenCV, C++, Laplacian Filter, Edge Enhancement
+![Connected Component Labeling](images/Result of connected component labeling_screenshot_19.10.2026.png)
 
-### 7. Box_filter
-- **Project:** Box Filter (Mean Filtering)
-- **Description:** Smooths the image using a mean (box) filter.
-- **Tech / Features:** OpenCV, C++, Box Filter, Image Smoothing
+The implementation applies:
 
-### 8. Histogram-matching
-- **Project:** Histogram Matching
-- **Description:** Adjusts the gray-level distribution of an image to match the histogram of a reference image.
-- **Tech / Features:** OpenCV, C++, Histogram Matching
+- Otsu Thresholding
+- Connected Component Labeling (CCL)
+- Union-Find Label Equivalence Resolution
+- Random Color Visualization
 
-### 9. Histogram-equalization
-- **Project:** Histogram Equalization
-- **Description:** Enhances image contrast to bring out more details.
-- **Tech / Features:** OpenCV, C++, Histogram Equalization
+Each connected region is assigned a unique label and visualized with a distinct color.
+
+
+## Features
+
+- C++
+- OpenCV 5
+- MSYS2 UCRT64
+- Makefile Build System
+- Function-based Project Architecture
+- VS Code Development Environment
+
+## Project Structure
+
+```text
+DIP_Projects
+├── Course_Lib/
+│   ├── myHist.cpp
+│   └── myHist.h
+│
+├── HW/
+│   ├── ImageFlip.cpp
+│   ├── BoxFilter.cpp
+│   ├── MedianFilter.cpp
+│   ├── GaussianNoise.cpp
+│   ├── UniformNoise.cpp
+│   ├── SaltPepperNoise.cpp
+│   ├── HistogramEqualization.cpp
+│   ├── HistogramMatching.cpp
+│   ├── LaplacianEnhancement.cpp
+│   └── ConnectedComponentLabeling.cpp
+│
+├── images/
+├── DIP.cpp
+├── Makefile
+└── README.md
+```
+
+## Assignments
+
+### 1. Image Flip
+
+- Flip image vertically
+- Mirror image horizontally
+
+### 2. Box Filter
+
+- Mean filtering
+- Image smoothing
+
+### 3. Median Filter
+
+- Median filtering
+- Salt-and-pepper noise reduction
+
+### 4. Gaussian Noise
+
+- Gaussian-distributed noise generation
+- Image degradation simulation
+
+### 5. Uniform Noise
+
+- Uniform noise generation
+- Noise analysis
+
+### 6. Salt-and-Pepper Noise
+
+- Random impulse noise generation
+- Noise robustness experiments
+
+### 7. Histogram Equalization
+
+- Contrast enhancement
+- Histogram redistribution
+
+### 8. Histogram Matching
+
+- Histogram specification
+- Gray-level distribution transfer
+
+### 9. Laplacian Enhancement
+
+- Laplacian filtering
+- Edge enhancement
+
+### 10. Connected Component Labeling
+
+- Otsu Thresholding
+- Connected Component Labeling (CCL)
+- Union-Find Label Equivalence Resolution
+- Colorized Component Visualization
+
+## Build
+
+```bash
+make
+```
+
+## Run
+
+```bash
+./dip.exe
+```
+
+Select a function from the menu:
+
+```text
+========== DIP Homework ==========
+1. Image Flip
+2. Box Filter
+3. Median Filter
+4. Histogram Equalization
+5. Histogram Matching
+6. Laplacian Enhancement
+7. Gaussian Noise
+8. Uniform Noise
+9. Salt Pepper Noise
+10. Connected Component Labeling
+```
+
+## Dependencies
+
+- OpenCV 5
+  - Official Website: https://opencv.org/
+  - Documentation: https://docs.opencv.org/
+  - Tutorials: https://docs.opencv.org/5.x/
+
+- MSYS2 UCRT64
+  - Official Website: https://www.msys2.org/
+  - UCRT64 Environment Guide: https://www.msys2.org/docs/environments/
+  - Installation Guide: https://www.mingw-w64.org/getting-started/msys2/
+
+- GNU Make
+  - Official Manual: https://www.gnu.org/software/make/manual/
+  - HTML Documentation: https://www.gnu.org/software/make/manual/html_node/
+
+- GCC
+  - Official Documentation: https://gcc.gnu.org/onlinedocs/
