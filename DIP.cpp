@@ -21,10 +21,10 @@ int main()
             {"Median Filter", MedianFilter},
             {"Histogram Equalization", HistogramEqualization},
             {"Histogram Matching", HistogramMatching},
-            {"Laplacian Enhancement", LaplacianEnhancement},
-            {"Gaussian Noise", GaussianNoise},
             {"Uniform Noise", UniformNoise},
             {"Salt Pepper Noise", SaltPepperNoise},
+            {"Gaussian Noise", GaussianNoise},
+            {"Laplacian Enhancement", LaplacianEnhancement},
             {"Connected Component Labeling", ConnectedComponentLabeling}};
 
     std::cout << "========== DIP Homework ==========\n";
